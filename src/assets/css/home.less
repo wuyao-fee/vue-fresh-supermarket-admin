@@ -1,0 +1,47 @@
+.home {
+    .menu-list {
+        width: 180px;
+        position: fixed;
+        height: 100%;
+        .ant-menu {
+            height: 100%;
+        }
+    }
+    .main-app {
+        margin-left: 180px;
+        transition: all 0.3s;       //添加动画过渡效果
+        &.menu-unfold {             //同时有两个样式，点击时会随菜单一起向左收缩
+            margin-left: 80px;
+        }
+        .main-header {
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+            padding-left: 10px;
+            padding-right: 20px;
+            .breadcrumb {
+                display: inline-block;
+                margin-left: 20px;
+            }
+            .user-info {
+                float: right;
+                text-align: center;
+                cursor: pointer;
+                li:not(:first-child) {
+                    display: none;
+                    background: #eee;
+                    color: #999;
+                    font-weight: bold;
+                }
+                li {
+                    padding: 0 25px;
+                }
+                &:hover {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
